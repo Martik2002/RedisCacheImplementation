@@ -17,7 +17,7 @@ public class RedisCacheService(IDistributedCache distributedCache) : ICacheServi
 
     private static readonly DistributedCacheEntryOptions DefaultCacheOptions = new()
     {
-        AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(1) // configurable if needed
+        AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30) // configurable if needed
     };
 
     /// <summary>
@@ -87,7 +87,6 @@ public class RedisCacheService(IDistributedCache distributedCache) : ICacheServi
 
         await distributedCache.SetStringAsync(key, serialized, options ?? DefaultCacheOptions, cancellationToken);
     }
-    
 
     /// <summary>
     /// Removes a cached item from Redis by its key.

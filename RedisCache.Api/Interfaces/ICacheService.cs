@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 using Microsoft.Extensions.Caching.Distributed;
 
 namespace RedisCache.Api.Interfaces
@@ -10,7 +10,7 @@ namespace RedisCache.Api.Interfaces
         Task<T> GetAsync<T>(string key, Func<Task<T>> factory, CancellationToken cancellationToken = default)
             where T : class;
 
-        Task SetAsync<T>(string key, T value, CancellationToken cancellationToken, DistributedCacheEntryOptions options = null) 
+        Task SetAsync<T>(string key, T value, CancellationToken cancellationToken, DistributedCacheEntryOptions options) 
             where T : class;
 
         Task RemoveAsync(string key, CancellationToken cancellationToken = default);
