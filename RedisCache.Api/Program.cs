@@ -1,3 +1,6 @@
+using RedisCache.Api.Infrastructure;
+using RedisCache.Api.Interfaces;
+using RedisCache.Api.Services;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ICacheService, RedisCacheService>();
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {
@@ -35,6 +39,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.MapEndpoints();
 
 app.UseHttpsRedirection();
 
