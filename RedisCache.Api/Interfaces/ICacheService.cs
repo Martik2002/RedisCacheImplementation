@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
+#nullable enable
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace RedisCache.Api.Interfaces
 {
