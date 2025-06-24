@@ -18,7 +18,7 @@ This project demonstrates how to implement a basic Redis-based cache service in 
 ```bash
 git clone https://github.com/Martik2002/RedisCacheImplementation.git
 cd RedisCacheImplementation
-
+```
 ---
 
 ## 🐳 How to Run Redis using Docker
