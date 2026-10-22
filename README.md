@@ -1,5 +1,7 @@
 # RedisCacheImplementation
 
+[![Build](https://github.com/Martik2002/RedisCacheImplementation/actions/workflows/build.yml/badge.svg)](https://github.com/Martik2002/RedisCacheImplementation/actions/workflows/build.yml)
+
 This project demonstrates how to implement a basic Redis-based cache service in ASP.NET Core using StackExchange.Redis.
 
 ---
